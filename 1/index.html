@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 1</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="screen-component">
+        <h1>0</h1>
+      </div>
+      <div class="button-component">
+        <button>click</button>
+      </div>
+    </div>
+    <a href="index2.html">Go to page 2</a>
+  </body>
+
+  <script>
+    const screen = document.querySelector(".screen-component h1");
+    const button = document.querySelector(".button-component button");
+
+    button.addEventListener("click", () => {
+      screen.innerHTML = Number(screen.innerHTML) + 1;
+    });
+  </script>
+
+  <style>
+    .screen-component {
+      width: 100%;
+      height: 100px;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .button-component {
+      width: 100%;
+      height: 100px;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</html>
